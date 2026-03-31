@@ -1,7 +1,38 @@
-# Visual Studio 暫存檔
-.vs/
+### .NET 相關 (必備) ###
 [Bb]in/
-[Oo]bj/
-*.user
+[Obj]/
+[Log]/
+*.exe
+*.dll
+*.pdb
 *.suo
-*.vshost.*
+*.user
+*.sln.docstates
+
+### IDE 個人設定 (避免多人協作衝突) ###
+.vs/
+.vscode/
+.idea/
+*.swp
+*.DS_Store
+
+### 套件管理 (不應上傳，應由 restore 產生) ###
+packages/
+node_modules/
+.nuget/
+
+### 環境變數與機密資訊 (非常重要！) ###
+.env
+*.usersecrets
+appsettings.Development.json
+# 建議保留 appsettings.json 作為模板，但內容不放正式環境密碼
+
+### Docker / Kubernetes (如果您有使用) ###
+.dockerignore
+bin/publish/
+
+### 資料庫相關 ###
+*.mdf
+*.ldf
+*.db
+*.sqlite

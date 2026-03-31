@@ -69,7 +69,9 @@ public class MyOfficeAcpdController : ControllerBase
     /// </remarks>
     [HttpPost]
     public async Task<IActionResult> CreateAcpdData([FromBody] ACPDDto acpdDto)
-        => await _acpdService.CreateAcpdData(acpdDto) ? Ok() : BadRequest();
+        => await _acpdService.CreateAcpdData(acpdDto)
+        ? CreatedAtAction(nameof(GetAcpdDataById), new { id = acpdDto.AcpdSid }, acpdDto)
+        : BadRequest("無法建立資源或 ID 已存在");
 
     /// <summary>
     /// 修改 ACPD 資料
@@ -98,7 +100,7 @@ public class MyOfficeAcpdController : ControllerBase
     /// </remarks>
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateAcpdData([FromRoute] string id, ACPDDto acpdDto)
-        => await _acpdService.UpdateAcpdData(id, acpdDto) ? Ok() : BadRequest();
+        => await _acpdService.UpdateAcpdData(id, acpdDto) ? NoContent() : NotFound();
 
     /// <summary>
     /// 刪除 單一ACPD 資料
@@ -111,5 +113,5 @@ public class MyOfficeAcpdController : ControllerBase
     /// </remarks>
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteAcpdData([FromRoute] string id)
-        => await _acpdService.DeleteAcpdData(id) ? Ok() : BadRequest();
+        => await _acpdService.DeleteAcpdData(id) ? NoContent() : NotFound();
 }

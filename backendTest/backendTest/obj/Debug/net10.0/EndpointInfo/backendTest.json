@@ -22,7 +22,7 @@
           "MyOfficeAcpd"
         ],
         "summary": "新增 ACPD 資料",
-        "description": "測試用 JSON：\r\n\r\n    POST /api/myofficeacpd\r\n    {\r\n       \"acpdSid\": \"USER20260331001\",\r\n       \"acpdCname\": \"王小明\",\r\n       \"acpdEname\": \"Kevin Wang\",\r\n       \"acpdEmail\": \"kevin@example.com\",\r\n       \"acpdStatus\": 1,\r\n       \"acpdStop\": false\r\n    }",
+        "description": " 測試用 JSON：\r\n{\r\n  \"acpdSid\": \"USER20260331001\",\r\n  \"acpdCname\": \"王小明\",\r\n  \"acpdEname\": \"Kevin Wang\",\r\n  \"acpdSname\": \"小明\",\r\n  \"acpdEmail\": \"kevin.wang@example.com\",\r\n  \"acpdStatus\": 1,\r\n  \"acpdStop\": false,\r\n  \"acpdStopMemo\": null,\r\n  \"acpdLoginId\": \"kevin_001\",\r\n  \"acpdLoginPwd\": \"Password123!\",\r\n  \"acpdMemo\": \"這是後端測試用範例帳號\",\r\n  \"acpdNowDateTime\": \"2026-03-31T15:00:00\",\r\n  \"acpdNowId\": \"ADMIN_01\",\r\n  \"acpdUpdDateTime\": \"2026-03-31T15:30:00\",\r\n  \"acpdUpdId\": \"ADMIN_01\"\r\n}",
         "requestBody": {
           "content": {
             "application/json": {
@@ -55,6 +55,7 @@
           "MyOfficeAcpd"
         ],
         "summary": "讀取 單一ACPD 資料",
+        "description": " 測試用 JSON：\r\n{\r\n  \"acpdSid\": \"USER20260331001\",\r\n}",
         "parameters": [
           {
             "name": "id",
@@ -76,7 +77,7 @@
           "MyOfficeAcpd"
         ],
         "summary": "修改 ACPD 資料",
-        "description": "測試用 JSON：\r\n\r\n    POST /api/myofficeacpd\r\n    {\r\n       \"acpdSid\": \"USER20260331001\",\r\n       \"acpdCname\": \"王小明\",\r\n       \"acpdEname\": \"Kevin Wang\",\r\n       \"acpdEmail\": \"kevin@example.com\",\r\n       \"acpdStatus\": 1,\r\n       \"acpdStop\": false\r\n    }",
+        "description": " 測試用 JSON：\r\n{\r\n  \"acpdSid\": \"需要修改的Id\",\r\n  --------------------------\r\n  以下為修改內容\r\n  \"acpdCname\": \"王小明\",\r\n  \"acpdEname\": \"Kevin Wang\",\r\n  \"acpdSname\": \"小明\",\r\n  \"acpdEmail\": \"kevin.wang@example.com\",\r\n  \"acpdStatus\": 1,\r\n  \"acpdStop\": false,\r\n  \"acpdStopMemo\": null,\r\n  \"acpdLoginId\": \"kevin_001\",\r\n  \"acpdLoginPwd\": \"Password123!\",\r\n  \"acpdMemo\": \"這是後端測試用範例帳號\",\r\n  \"acpdNowDateTime\": \"2026-03-31T15:00:00\",\r\n  \"acpdNowId\": \"ADMIN_01\",\r\n  \"acpdUpdDateTime\": \"2026-03-31T15:30:00\",\r\n  \"acpdUpdId\": \"ADMIN_01\"\r\n}",
         "parameters": [
           {
             "name": "id",
@@ -117,6 +118,7 @@
           "MyOfficeAcpd"
         ],
         "summary": "刪除 單一ACPD 資料",
+        "description": " 測試用 JSON：\r\n{\r\n  \"acpdSid\": \"需要刪除的Id\",\r\n}",
         "parameters": [
           {
             "name": "id",
