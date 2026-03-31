@@ -1,0 +1,81 @@
+[
+  {
+    "ContainingType": "backendTest.Controllers.MyOfficeAcpdController",
+    "Method": "GetAcpdData",
+    "RelativePath": "api/myofficeacpd",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backendTest.Controllers.MyOfficeAcpdController",
+    "Method": "CreateAcpdData",
+    "RelativePath": "api/myofficeacpd",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "acpdDto",
+        "Type": "ACPDDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backendTest.Controllers.MyOfficeAcpdController",
+    "Method": "GetAcpdDataById",
+    "RelativePath": "api/myofficeacpd/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backendTest.Controllers.MyOfficeAcpdController",
+    "Method": "UpdateAcpdData",
+    "RelativePath": "api/myofficeacpd/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "acpdDto",
+        "Type": "ACPDDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backendTest.Controllers.MyOfficeAcpdController",
+    "Method": "DeleteAcpdData",
+    "RelativePath": "api/myofficeacpd/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

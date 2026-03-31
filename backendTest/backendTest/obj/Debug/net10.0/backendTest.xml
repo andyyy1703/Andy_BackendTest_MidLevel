@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>backendTest</name>
+    </assembly>
+    <members>
+        <member name="M:backendTest.Controllers.MyOfficeAcpdController.GetAcpdData">
+            <summary>
+            讀取 全ACPD 資料
+            </summary>
+        </member>
+        <member name="M:backendTest.Controllers.MyOfficeAcpdController.GetAcpdDataById(System.String)">
+            <summary>
+            讀取 單一ACPD 資料
+            </summary>
+        </member>
+        <member name="M:backendTest.Controllers.MyOfficeAcpdController.CreateAcpdData(ACPDDto)">
+            <summary>
+            新增 ACPD 資料
+            </summary>
+            <remarks>
+            測試用 JSON：
+            
+                POST /api/myofficeacpd
+                {
+                   "acpdSid": "USER20260331001",
+                   "acpdCname": "王小明",
+                   "acpdEname": "Kevin Wang",
+                   "acpdEmail": "kevin@example.com",
+                   "acpdStatus": 1,
+                   "acpdStop": false
+                }
+            </remarks>
+        </member>
+        <member name="M:backendTest.Controllers.MyOfficeAcpdController.UpdateAcpdData(System.String,ACPDDto)">
+            <summary>
+            修改 ACPD 資料
+            </summary>
+            <remarks>
+            測試用 JSON：
+            
+                POST /api/myofficeacpd
+                {
+                   "acpdSid": "USER20260331001",
+                   "acpdCname": "王小明",
+                   "acpdEname": "Kevin Wang",
+                   "acpdEmail": "kevin@example.com",
+                   "acpdStatus": 1,
+                   "acpdStop": false
+                }
+            </remarks>
+        </member>
+        <member name="M:backendTest.Controllers.MyOfficeAcpdController.DeleteAcpdData(System.String)">
+            <summary>
+            刪除 單一ACPD 資料
+            </summary>
+        </member>
+        <member name="T:Program">
+            <summary>
+            Auto-generated public partial Program class for top-level statement apps.
+            </summary>
+        </member>
+    </members>
+</doc>
