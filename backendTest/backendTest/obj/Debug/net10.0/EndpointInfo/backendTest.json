@@ -1,0 +1,238 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "MyOffice API",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/myofficeacpd": {
+      "get": {
+        "tags": [
+          "MyOfficeAcpd"
+        ],
+        "summary": "讀取 全ACPD 資料",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "MyOfficeAcpd"
+        ],
+        "summary": "新增 ACPD 資料",
+        "description": "測試用 JSON：\r\n\r\n    POST /api/myofficeacpd\r\n    {\r\n       \"acpdSid\": \"USER20260331001\",\r\n       \"acpdCname\": \"王小明\",\r\n       \"acpdEname\": \"Kevin Wang\",\r\n       \"acpdEmail\": \"kevin@example.com\",\r\n       \"acpdStatus\": 1,\r\n       \"acpdStop\": false\r\n    }",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ACPDDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ACPDDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ACPDDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/myofficeacpd/{id}": {
+      "get": {
+        "tags": [
+          "MyOfficeAcpd"
+        ],
+        "summary": "讀取 單一ACPD 資料",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "MyOfficeAcpd"
+        ],
+        "summary": "修改 ACPD 資料",
+        "description": "測試用 JSON：\r\n\r\n    POST /api/myofficeacpd\r\n    {\r\n       \"acpdSid\": \"USER20260331001\",\r\n       \"acpdCname\": \"王小明\",\r\n       \"acpdEname\": \"Kevin Wang\",\r\n       \"acpdEmail\": \"kevin@example.com\",\r\n       \"acpdStatus\": 1,\r\n       \"acpdStop\": false\r\n    }",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ACPDDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ACPDDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ACPDDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "MyOfficeAcpd"
+        ],
+        "summary": "刪除 單一ACPD 資料",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ACPDDto": {
+        "type": "object",
+        "properties": {
+          "acpdSid": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "acpdCname": {
+            "maxLength": 60,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "acpdEname": {
+            "maxLength": 40,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "acpdSname": {
+            "maxLength": 40,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "acpdEmail": {
+            "maxLength": 60,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "acpdStatus": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "acpdStop": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "acpdStopMemo": {
+            "maxLength": 60,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "acpdLoginId": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "acpdLoginPwd": {
+            "maxLength": 60,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "acpdMemo": {
+            "maxLength": 600,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "acpdNowDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acpdNowId": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "acpdUpdDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acpdUpdId": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "MyOfficeAcpd"
+    }
+  ]
+}
